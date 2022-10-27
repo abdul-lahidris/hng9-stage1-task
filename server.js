@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(cors({ origin: (origin, callback) => callback(null, true), credentials: true }));
 
 // api routes
-app.use('/', intro);
+app.get('/', intro);
 
 function intro(req, res, next){
     return res.json({
